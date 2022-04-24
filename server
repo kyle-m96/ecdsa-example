@@ -1,3 +1,10 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.security.PrivateKey;
+import java.security.SecureRandom;
+import.java.security.Signature;
+
 // Generate a 10 digit cryptographic nonce
 SecureRandom random = new SecureRandom();
 StringBuilder sb = new StringBuilder();
