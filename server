@@ -16,6 +16,8 @@ server_nonce = sb.toString();
 // Load private key
 PrivateKey priv_key = Utils.getPrivateKey();
 Signature signature = Signature.getinstance("SHA256withECDSA");
+
+// Create message
 server_msg = "Hello" + server_nonce;
 
 // Sign the message
