@@ -26,7 +26,8 @@ signature.initSign(priv_key);
 signature.update(server_msg);
 server_signature = signature.sign();    // This is the digital siganture
 
-server_msg = Base64.getEncoder().encodeToString(server_signature);
+// Sending plaintext message and append digital signature
+server_msg = server_msg + Base64.getEncoder().encodeToString(server_signature);
 
 try {
     socket = new Socket(Utils.destination_IP, 17000);
